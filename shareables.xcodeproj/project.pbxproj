@@ -13,6 +13,10 @@
 		7856C420243C5F6A00BB5AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7856C41E243C5F6A00BB5AA6 /* Main.storyboard */; };
 		7856C422243C5F6B00BB5AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7856C421243C5F6B00BB5AA6 /* Assets.xcassets */; };
 		7856C425243C5F6B00BB5AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7856C423243C5F6B00BB5AA6 /* LaunchScreen.storyboard */; };
+		786D6FF9243CD94000C879F8 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786D6FF8243CD94000C879F8 /* LICENSE.txt */; };
+		786D6FFB243CD94E00C879F8 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D6FFA243CD94E00C879F8 /* KeychainItem.swift */; };
+		786D6FFF243CF6D000C879F8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D6FFE243CF6D000C879F8 /* MainTabBarController.swift */; };
+		786D7001243CFE3900C879F8 /* MainSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D7000243CFE3900C879F8 /* MainSettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		7856C421243C5F6B00BB5AA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7856C424243C5F6B00BB5AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7856C426243C5F6B00BB5AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785EA559243CD35C005FBC19 /* shareables.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareables.entitlements; sourceTree = "<group>"; };
+		786D6FF8243CD94000C879F8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		786D6FFA243CD94E00C879F8 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		786D6FFE243CF6D000C879F8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		786D7000243CFE3900C879F8 /* MainSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +65,28 @@
 		7856C417243C5F6A00BB5AA6 /* shareables */ = {
 			isa = PBXGroup;
 			children = (
+				785EA559243CD35C005FBC19 /* shareables.entitlements */,
 				7856C418243C5F6A00BB5AA6 /* AppDelegate.swift */,
 				7856C41A243C5F6A00BB5AA6 /* SceneDelegate.swift */,
 				7856C41C243C5F6A00BB5AA6 /* LoginViewController.swift */,
+				786D6FFE243CF6D000C879F8 /* MainTabBarController.swift */,
+				786D7000243CFE3900C879F8 /* MainSettingsTableViewController.swift */,
 				7856C41E243C5F6A00BB5AA6 /* Main.storyboard */,
 				7856C421243C5F6B00BB5AA6 /* Assets.xcassets */,
 				7856C423243C5F6B00BB5AA6 /* LaunchScreen.storyboard */,
 				7856C426243C5F6B00BB5AA6 /* Info.plist */,
+				786D6FF7243CD92C00C879F8 /* Apple Supporting Files */,
 			);
 			path = shareables;
+			sourceTree = "<group>";
+		};
+		786D6FF7243CD92C00C879F8 /* Apple Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				786D6FFA243CD94E00C879F8 /* KeychainItem.swift */,
+				786D6FF8243CD94000C879F8 /* LICENSE.txt */,
+			);
+			path = "Apple Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786D6FF9243CD94000C879F8 /* LICENSE.txt in Resources */,
 				7856C425243C5F6B00BB5AA6 /* LaunchScreen.storyboard in Resources */,
 				7856C422243C5F6B00BB5AA6 /* Assets.xcassets in Resources */,
 				7856C420243C5F6A00BB5AA6 /* Main.storyboard in Resources */,
@@ -138,6 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786D7001243CFE3900C879F8 /* MainSettingsTableViewController.swift in Sources */,
+				786D6FFF243CF6D000C879F8 /* MainTabBarController.swift in Sources */,
+				786D6FFB243CD94E00C879F8 /* KeychainItem.swift in Sources */,
 				7856C41D243C5F6A00BB5AA6 /* LoginViewController.swift in Sources */,
 				7856C419243C5F6A00BB5AA6 /* AppDelegate.swift in Sources */,
 				7856C41B243C5F6A00BB5AA6 /* SceneDelegate.swift in Sources */,
@@ -284,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = shareables/shareables.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = shareables/Info.plist;
@@ -303,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = shareables/shareables.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = shareables/Info.plist;
