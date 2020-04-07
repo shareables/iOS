@@ -10,8 +10,6 @@ import UIKit
 
 class MainSettingsTableViewController: UITableViewController {
     
-    @IBOutlet weak var logoutTableViewCell: UITableViewCell!
-    
     func logout() {
         KeychainItem.deleteUserIdentifierFromKeychain()
         DispatchQueue.main.async {
@@ -23,7 +21,7 @@ class MainSettingsTableViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             switch indexPath.row {
-            case 0:
+            case 1:
                 logout()
                 break
             default:

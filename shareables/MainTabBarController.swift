@@ -10,8 +10,10 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-}
-
-extension UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 }
