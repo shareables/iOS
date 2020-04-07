@@ -94,14 +94,66 @@
                     <view key="view" contentMode="scaleToFill" id="SOX-mo-v7x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c3O-CD-fPh">
+                                <rect key="frame" x="40" y="150" width="334" height="32"/>
+                                <segments>
+                                    <segment title="Everyone"/>
+                                    <segment title="Friends"/>
+                                    <segment title="Close Friends"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thc-16-2Fa">
+                                <rect key="frame" x="40" y="191" width="334" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="what's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fkr-Jy-0OH">
+                                        <rect key="frame" x="10" y="10" width="314" height="100"/>
+                                        <color key="tintColor" name="shareable yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Zdp-kr-J1J"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" name="shareable green"/>
+                                <constraints>
+                                    <constraint firstItem="fkr-Jy-0OH" firstAttribute="top" secondItem="thc-16-2Fa" secondAttribute="top" constant="10" id="2xp-ui-gVt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fkr-Jy-0OH" secondAttribute="bottom" constant="10" id="AJ3-LC-lbw"/>
+                                    <constraint firstAttribute="trailing" secondItem="fkr-Jy-0OH" secondAttribute="trailing" constant="10" id="krb-Xc-jC5"/>
+                                    <constraint firstItem="fkr-Jy-0OH" firstAttribute="leading" secondItem="thc-16-2Fa" secondAttribute="leading" constant="10" id="soT-3h-hQl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hte-hY-px4">
+                                <rect key="frame" x="188" y="321" width="38" height="30"/>
+                                <state key="normal" title="share"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hte-hY-px4" firstAttribute="top" secondItem="thc-16-2Fa" secondAttribute="bottom" constant="10" id="AEZ-NU-yVb"/>
+                            <constraint firstItem="c3O-CD-fPh" firstAttribute="top" secondItem="VUw-1f-nMo" secondAttribute="top" constant="10" id="AMg-x4-lG9"/>
+                            <constraint firstItem="thc-16-2Fa" firstAttribute="leading" secondItem="VUw-1f-nMo" secondAttribute="leading" constant="40" id="BNo-bn-3wP"/>
+                            <constraint firstItem="VUw-1f-nMo" firstAttribute="trailing" secondItem="c3O-CD-fPh" secondAttribute="trailing" constant="40" id="Ogo-wd-XqS"/>
+                            <constraint firstItem="VUw-1f-nMo" firstAttribute="trailing" secondItem="thc-16-2Fa" secondAttribute="trailing" constant="40" id="TFo-JT-0ss"/>
+                            <constraint firstItem="hte-hY-px4" firstAttribute="centerX" secondItem="SOX-mo-v7x" secondAttribute="centerX" id="gT9-u4-sqh"/>
+                            <constraint firstItem="thc-16-2Fa" firstAttribute="top" secondItem="c3O-CD-fPh" secondAttribute="bottom" constant="10" id="imq-KL-tVO"/>
+                            <constraint firstItem="c3O-CD-fPh" firstAttribute="leading" secondItem="VUw-1f-nMo" secondAttribute="leading" constant="40" id="kGF-Qs-EYz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-1f-nMo"/>
                     </view>
                     <navigationItem key="navigationItem" title="share" id="zJq-Lz-zrq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBo-sB-3LI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3958" y="-183"/>
+            <point key="canvasLocation" x="3957.971014492754" y="-183.48214285714286"/>
         </scene>
         <!--shareables-->
         <scene sceneID="kKe-sv-sI9">
@@ -256,6 +308,9 @@
         </namedColor>
         <namedColor name="shareable red">
             <color red="1" green="0.18333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="shareable yellow">
+            <color red="1" green="0.8833333333333333" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

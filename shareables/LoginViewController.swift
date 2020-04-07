@@ -63,11 +63,9 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             
             // Create an account in your system.
             let userIdentifier = appleIDCredential.user
-//            let fullName = appleIDCredential.fullName
-//            let email = appleIDCredential.email
             
             // For the purpose of this demo app, store the `userIdentifier` in the keychain.
-            self.saveUserInKeychain(userIdentifier)
+            KeychainItem.saveUserIdentifierFromKeychain(userIdentifier: userIdentifier)
             
             // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
             self.showMainTabBarController()
@@ -75,19 +73,6 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         default:
             // TODO: Show error
             break
-        }
-    }
-    
-    private func saveUserInKeychain(_ userIdentifier: String) {
-        do {
-            try KeychainItem(service: "com.kirinpatel.shareables", account: "userIdentifier").saveItem(userIdentifier)
-        } catch {
-            let alertController = UIAlertController(title: "",
-                                                    message: "",
-                                                    preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            print("Unable to save userIdentifier to keychain.")
         }
     }
     
@@ -104,7 +89,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     /// - Tag: did_complete_error
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        print(error)
+        print("We got an error: \(error)")
     }
 }
 
